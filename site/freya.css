@@ -1,0 +1,82 @@
+/* docs.freya-tde.dev – Farben wie freya-tde.dev; #990000 ist die Hausfarbe.
+   Nur „Auto“ (System), „Light“ (hell) und „Coal“ (dunkel) bleiben wählbar. */
+
+#mdbook-theme-rust, #mdbook-theme-navy, #mdbook-theme-ayu { display: none; }
+
+.light, html:not(.js) {
+    --bg: #f5f5f5;
+    --fg: #000000;
+    --sidebar-bg: #ffffff;
+    --sidebar-fg: #000000;
+    --sidebar-active: #990000;
+    --sidebar-spacer: #e6e6e6;
+    --icons: #4a4a4a;
+    --icons-hover: #990000;
+    --links: #990000;
+    --inline-code-color: #4d0000;
+    --theme-popup-bg: #ffffff;
+    --theme-popup-border: #d9d9d9;
+    --theme-hover: #f0e0e0;
+    --quote-bg: #ffffff;
+    --quote-border: #d9d9d9;
+    --table-border-color: #d9d9d9;
+    --table-header-bg: #e6e6e6;
+    --table-alternate-bg: #fafafa;
+    --searchresults-li-bg: #f0e0e0;
+    --search-mark-bg: #f2b8b8;
+    --sidebar-header-border-color: #990000;
+    --freya-heading-shadow: #969696;
+    --freya-heading-stroke: transparent;
+}
+
+.coal {
+    --bg: #232323;
+    --fg: #f2f2f2;
+    --sidebar-bg: #2d2d2d;
+    --sidebar-fg: #f2f2f2;
+    --sidebar-active: #ff6b6b;
+    --sidebar-spacer: #3a3a3a;
+    --icons: #c4c4c4;
+    --icons-hover: #ffffff;
+    --links: #f2f2f2;
+    --inline-code-color: #ffd0d0;
+    --theme-popup-bg: #2d2d2d;
+    --theme-popup-border: #444444;
+    --theme-hover: #3a2626;
+    --quote-bg: #2d2d2d;
+    --quote-border: #444444;
+    --table-border-color: #444444;
+    --table-header-bg: #3a3a3a;
+    --table-alternate-bg: #282828;
+    --searchresults-li-bg: #3a2626;
+    --search-mark-bg: #990000;
+    --sidebar-header-border-color: #990000;
+    --freya-heading-shadow: transparent;
+    --freya-heading-stroke: #f2f2f2;
+}
+
+/* Überschriften in der Hausfarbe: hell mit Schatten, dunkel mit heller Kontur. */
+.content h1, .content h2, .content h3, .content h4 {
+    color: #990000;
+    text-shadow: 1px 1px 0 var(--freya-heading-shadow);
+    -webkit-text-stroke: 1.6px var(--freya-heading-stroke);
+    paint-order: stroke fill;
+}
+.content h3, .content h4 { text-shadow: none; }
+.content .header:link, .content .header:visited { color: inherit; text-decoration: none; }
+
+/* Links: hell rot, dunkel hell mit roter Unterstreichung. */
+.content a { text-decoration: underline; text-decoration-color: #990000; text-underline-offset: 3px; }
+.content a:hover { text-decoration-thickness: 2px; }
+
+.menu-title { color: #990000; font-weight: 700; -webkit-text-stroke: 1px var(--freya-heading-stroke); paint-order: stroke fill; }
+
+/* Sprachumschalter in der Menüleiste. */
+.freya-lang { font-size: 0.85em; font-weight: 600; text-decoration: none; padding: 0 0.6em; color: var(--icons); line-height: var(--menu-bar-height); }
+.freya-lang:hover { color: var(--icons-hover); }
+
+/* Karten auf der Einführungsseite. */
+.freya-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 1.5em 0; }
+.freya-cards a { display: block; padding: 14px 16px; border: 1px solid var(--table-border-color); border-left: 4px solid #990000; border-radius: 8px; background: var(--sidebar-bg); color: var(--fg); text-decoration: none; }
+.freya-cards a:hover { border-color: #990000; }
+.freya-cards strong { display: block; color: #990000; -webkit-text-stroke: 1px var(--freya-heading-stroke); paint-order: stroke fill; margin-bottom: 4px; }

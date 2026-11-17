@@ -1,0 +1,19 @@
+# Vorlage: tools/build.py setzt @TITLE@ und @LANG@ ein.
+[book]
+title = "@TITLE@"
+authors = ["Dragon Software"]
+language = "@LANG@"
+src = "src"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "coal"
+additional-css = ["freya.css"]
+additional-js = ["freya-lang.js", "freya.js"]
+git-repository-url = "https://github.com/Freya-TDE"
+git-repository-icon = "fab-github"
+no-section-label = true
+site-url = "/@LANG@/"
+
+[output.html.search]
+enable = true

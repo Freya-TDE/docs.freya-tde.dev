@@ -1,3 +1,7 @@
 /build/
 /public/
 /sources/
+
+# Lokale Werkzeug-Dateien (nicht ins Repo)
+/.claude/
+/.mcp.json

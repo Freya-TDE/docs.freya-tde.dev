@@ -37,8 +37,11 @@ dunkel / System), den Sprachumschalter (`freya.js`), die Einführungsseiten und 
 
 ## Veröffentlichen / publish
 
-Der Workflow `.github/workflows/pages.yml` baut bei jedem Push, von Hand und auf ein
-`repository_dispatch` vom Typ `docs` aus einem Programm-Repo. Voraussetzung: öffentliches Repository,
-*Settings → Pages → Source: GitHub Actions*, Domain `docs.freya-tde.dev` (Datei `site/CNAME`).
+Der Workflow `.github/workflows/pages.yml` baut bei jedem Push, von Hand, auf ein
+`repository_dispatch` vom Typ `docs` aus einem Programm-Repo und täglich um 04:17 UTC (so kommen
+Doku-Änderungen aus Freya-TDE, RUF und CT-E ohne Token an). Voraussetzung: öffentliches Repository,
+*Settings → Pages → Source: GitHub Actions* (bei „Deploy from a branch“ versucht GitHub zusätzlich einen
+Jekyll-Build, der an mdBook scheitert), Domain `docs.freya-tde.dev` (Datei `site/CNAME`).
+*Builds on push, by hand, on a `docs` dispatch and daily; Pages source must be "GitHub Actions".*
 
 Lizenz / license: MIT OR Apache-2.0, © Dragon Software.

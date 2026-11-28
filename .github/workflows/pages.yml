@@ -1,7 +1,8 @@
 # docs.freya-tde.dev bauen und auf GitHub Pages veröffentlichen.
 # Holt die Doku aus Freya-TDE, RUF und CT-E (tools/build.py). Läuft bei Änderungen hier,
-# von Hand und wenn ein Programm-Repo „docs“ meldet (repository_dispatch).
-# Build docs.freya-tde.dev and publish it on GitHub Pages.
+# von Hand, wenn ein Programm-Repo „docs“ meldet (repository_dispatch), und täglich, damit
+# Doku-Änderungen in den Programm-Repos ohne Token ankommen.
+# Build docs.freya-tde.dev and publish it on GitHub Pages (also daily, to pick up doc changes).
 name: Pages
 
 on:
@@ -10,6 +11,8 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [docs]
+  schedule:
+    - cron: "17 4 * * *"
 
 permissions:
   contents: read
